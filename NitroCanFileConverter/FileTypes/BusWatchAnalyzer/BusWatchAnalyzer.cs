@@ -119,6 +119,10 @@ namespace DataConverter.FileTypes.BusWatchAnalyzer
                 { timestring.Insert(2, "."); }
             return $"\t{timestring}\t\t{inst.bus}\t{inst.id}\t\t\t{inst.dir}\td\t{inst.dlc}\t{datastring}";
         }
-     
+
+        public string Name()
+        {
+            return (" BusWatchAnalyzer.txt");
+        }
     }
 }

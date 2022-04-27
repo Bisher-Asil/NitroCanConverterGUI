@@ -96,5 +96,9 @@ namespace DataConverter.FileTypes.NitroAnalyzer
             return $"{inst.time}ms \t\t{inst.dir}\t{inst.id}\t{inst.dlc}\t{datastring}";
         }
 
+        public string Name()
+        {
+            return (" NitroAnalyzer.txt");
+        }
     }
 }

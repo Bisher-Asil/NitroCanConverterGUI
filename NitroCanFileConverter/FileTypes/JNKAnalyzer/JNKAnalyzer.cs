@@ -62,6 +62,9 @@ namespace DataConverter.FileTypes.JNKAnalyzer
             return $"{jsonString}";
         }
 
-       
+        public string Name()
+        {
+            return (" JNKAnalyzer.jnk");
+        }
     }
  }

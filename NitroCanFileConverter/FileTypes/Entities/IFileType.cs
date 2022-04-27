@@ -8,6 +8,7 @@ namespace DataConverter.FileTypes.Entities
 {
     public interface IFileType
     {
+        string Name();
         List<Instance> Convert(string BeforePath);
         void WritetoFile(List<Instance> instList, string outputpath);
     }

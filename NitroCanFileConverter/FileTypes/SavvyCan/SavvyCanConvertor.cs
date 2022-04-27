@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace DataConverter.FileTypes.SavvyCanConvertor
 {
-      public class SavvyCanConvertor : IFileType // if broken put class back to static then remove ifile type stuff
+      public class SavvyCanConvertor : IFileType 
         {
         const int TokenCount = 14;
         int _losses = 0;
@@ -96,6 +96,11 @@ namespace DataConverter.FileTypes.SavvyCanConvertor
                 datastring += inst.data[i] + (i < (inst.dlc-1)?"," :"");
             }
             return $"{inst.time},  {inst.id},{inst.extended},{inst.dir},{inst.bus},{inst.dlc},{datastring}"; // write for each from length to id
+        }
+
+        public string Name()
+        {
+            return (" SavvyCan.csv");
         }
     }
 }
