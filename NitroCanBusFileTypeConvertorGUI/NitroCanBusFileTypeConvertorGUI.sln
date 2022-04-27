@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32414.318
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NitroCanBusFileTypeConvertorGUI", "NitroCanBusFileTypeConvertorGUI.csproj", "{CC07F0EF-BE21-499E-8557-33E35EB797B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NitroCanFileConverter", "..\NitroCanFileConverter\NitroCanFileConverter.csproj", "{45D8EA39-3F4A-46F9-B533-396F938C45BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC07F0EF-BE21-499E-8557-33E35EB797B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC07F0EF-BE21-499E-8557-33E35EB797B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC07F0EF-BE21-499E-8557-33E35EB797B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC07F0EF-BE21-499E-8557-33E35EB797B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45D8EA39-3F4A-46F9-B533-396F938C45BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45D8EA39-3F4A-46F9-B533-396F938C45BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45D8EA39-3F4A-46F9-B533-396F938C45BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45D8EA39-3F4A-46F9-B533-396F938C45BC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7EAB8EA0-3065-4A52-AF89-FB1BDBD334C7}
+	EndGlobalSection
+EndGlobal
