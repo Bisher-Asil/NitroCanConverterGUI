@@ -46,14 +46,14 @@ namespace DataConverter.FileTypes.JNKAnalyzer
             Console.WriteLine("finished JNK file");
         }
 
-        public string ToJNK(Instance inst) //TODO: make this to JNK
+        public string ToJNK(Instance inst)
         {
             //{"canId":"186","elapseTime":60011,"dlc":"7","rawData":"0000320412BE9A"}
             int.TryParse(inst.time, NumberStyles.HexNumber, null, out int result);
 
             string datastring = string.Join("", inst.data);
 
-            var Serial = new JNKentity { canId = inst.id, dlc = inst.dlc.ToString(), elapseTime = result, rawData = datastring };
+            var Serial = new JNKentity { canId = inst.id.Replace(" ",string.Empty), dlc = inst.dlc.ToString(), elapseTime = result, rawData = datastring };
 
             string jsonString = JsonConvert.SerializeObject(Serial);
 
