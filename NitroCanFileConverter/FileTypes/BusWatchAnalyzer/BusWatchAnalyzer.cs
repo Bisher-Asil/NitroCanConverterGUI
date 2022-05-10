@@ -12,6 +12,7 @@ namespace DataConverter.FileTypes.BusWatchAnalyzer
 {
     public class BusWatchAnalyzer : IFileType
     {
+        // remove token system, and make it so any line that starts with number is our data
         const int TokenCount = 14;
         int _losses = 0;
         List<Instance> instances = new List<Instance>();
@@ -21,12 +22,9 @@ namespace DataConverter.FileTypes.BusWatchAnalyzer
             foreach (string Line in Before)
             {
                 var splitline = Line.Split(new char[] { ' ', '\t' }, StringSplitOptions.RemoveEmptyEntries);
-                if (splitline.Length != TokenCount) { _losses++; continue; }
+                if (CheckIfLine(splitline[0]) == false) { _losses++; continue; }
                 instances.Add(AddTheInstance(splitline));
             }
-
-    /*       SavvyCanConvertor savvy = new SavvyCanConvertor();
-            savvy.WritetoFile(instances, AfterPath);   TODO: REMOVE ME, THIS IS CHEATING!*/
             return instances;
         }
 
@@ -47,6 +45,19 @@ namespace DataConverter.FileTypes.BusWatchAnalyzer
             };
         }
 
+        private bool CheckIfLine(string v)
+        {
+            var charsToRemove = new string[] { "." };
+            foreach (var c in charsToRemove)
+            {
+                v = v.Replace(c, string.Empty);
+            }
+            if (int.TryParse(v, NumberStyles.HexNumber, null, out int result))
+            {
+                return true;
+            }
+            else return false;
+        }
         private string Generatdir(string v)
         {
             return v;
